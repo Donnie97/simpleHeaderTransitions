@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+  background: lightblue;
+  height: 100vh;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 50px;
+
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* css for header transitions */
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.nav-item {
+  width: 25%;
+  overflow: show;
+}
+.nav-title {
+  font-size: 40px;
+  height: 50px;
+}
+.sub-menu {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;  
+}
+.backdrop{
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  height: 0px;
+  transition: 0.4s;
+  transition-delay: 0.6s;
+}
+
+.nav-item:hover .backdrop{
+  transition-delay: 0s;
+}
+
+
+.nav-item:hover .sub-menu{
+  padding-bottom: 20px;
+} 
+
+.nav-item:hover .sub-menu-imgs > .backdrop{
+  height: 340px;
+}
+
+.nav-item:hover .backdrop{
+  height: 64px;
+}
+
+.sub-menu-item {
+  height: auto;
+  color: #222;
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+}
+
+.sub-menu-imgs .sub-menu-item {
+  margin: 45px;
+  top: -50px;
+}
+
+.sub-menu-text .sub-menu-item {
+  font-size: 24px;
+  margin: 20px;
+  top: -25px;
+}
+
+.nav-item:hover .sub-menu-item {
+  transition-delay: .4s;
+  opacity: 1;
+  top: 0;
+}
+
+.nav-item:hover .sub-menu-item:nth-child(2) {
+  transition-delay: .5s;
+}
+.nav-item:hover .sub-menu-item:nth-child(3) {
+  transition-delay: .6s;
+
+}
+.nav-item .sub-menu-item {
+  transition-delay: .2s;
+}
+
+.nav-item .sub-menu-item:nth-child(2) {
+  transition-delay: .1s;
+}
+.nav-item .sub-menu-item:nth-child(3) {
+  transition-delay: 0s;
+}
+
